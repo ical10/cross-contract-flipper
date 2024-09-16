@@ -7,6 +7,7 @@ publish = false
 
 [dependencies]
 ink = { version = "5.0.0", default-features = false }
+scale-info = { version = "2.5", default-features = false, features = ["derive"] }
 
 # Note: We **need** to specify the `ink-as-dependency` feature.
 #
@@ -23,7 +24,7 @@ path = "lib.rs"
 default = ["std"]
 std = [
     "ink/std",
-
+    "scale-info/std",
     # Note: The metadata generation step requires `std`. If we don't specify this the metadata
     # generation for our contract will fail!
     "other-contract/std",
